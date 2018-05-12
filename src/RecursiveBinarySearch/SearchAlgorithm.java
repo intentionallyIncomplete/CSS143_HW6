@@ -1,3 +1,5 @@
+package RecursiveBinarySearch;
+
 /**
  * 
  * SearchAlgorithm 
@@ -22,6 +24,7 @@ public abstract class SearchAlgorithm {
 	 *                   for use in comparing two different search algorithms
 	 */
 	private int count = 0;
+	
 	public void incrementCount() {
 		count++;
 	}

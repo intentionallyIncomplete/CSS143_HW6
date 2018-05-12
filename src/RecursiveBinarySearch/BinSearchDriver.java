@@ -1,3 +1,5 @@
+package RecursiveBinarySearch;
+
 /**
  * Linear and Binary Search Homework 5 Driver
  * CSS 162
@@ -15,11 +17,7 @@ import java.util.Scanner;
 
 public class BinSearchDriver {
 
-	public final static String FILE_AND_PATH = "c:\\longwords.txt";
-	/* 
-	 * TODO: Be sure to change the FILE_AND_PATH to point to your local 
-	 * copy of longwords.txt or a FileNotFoundException will result
-	 */	
+	public final static String FILE_AND_PATH = "C:/Users/Quigy Laptop/workspace/CSS143_HW6/longwords.txt";
 	
 	
 	//Note how we deal with Java's Catch-or-Declare rule here by declaring the exceptions we might throw
@@ -59,7 +57,6 @@ public class BinSearchDriver {
 	 * postcondition: Uses a BinarySearch object (which implements this style of search) to try to find the target string
 	 */
 	private static void tryBinarySearch(String[] wordsToSearch, String target) {
-		//Todo: Build a LinearSearch class that inherits from SearchAlgorithm, and put it in the same directory as this class to successfully compile
 		SearchAlgorithm bs = new BinarySearch();
 		
 		try {
@@ -78,12 +75,13 @@ public class BinSearchDriver {
 	 * postcondition: Uses a LinearSearch object to try to find the target string
 	 */
 	private static void tryLinearSearch(String[] wordsToSearch, String target) {
-		//Todo: Build a LinearSearch class that inherits from SearchAlgorithm, and put it in the same directory as this class to successfully compile
 		SearchAlgorithm bs = new LinearSearch();
 		
 		try {
 			System.out.print( target + " found at index: " + bs.search(wordsToSearch,target));
-			System.out.println( " taking " + bs.getCount() + " comparisons.");
+			//System.out.print( target + " found at index: " + bs.recSearch(wordsToSearch,target));
+//			System.out.println( " taking " + bs.getCount() + " comparisons.");
+			System.out.println( " taking " + bs.getCount() + " comparisons in.");
 			
 		} 
 		catch( ItemNotFoundException e ) {
